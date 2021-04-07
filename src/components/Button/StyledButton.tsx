@@ -54,8 +54,8 @@ const StyledButton = styled.button<ButtonProps>`
   color: ${getButtonVariantProp("color")};
   cursor: pointer;
   display: inline-flex;
-  font-family: inherit;
-  font-size: 16px;
+  font-family: monospace;
+  font-size: 14px;
   font-weight: 600;
   /* max-content instead of auto for Safari fix */
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "max-content")};

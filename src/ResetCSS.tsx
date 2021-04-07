@@ -29,7 +29,7 @@ const ResetCSS = createGlobalStyle`
   }
   body {
     line-height: 1;
-    font-size: 16px;
+    font-size: 14px;
   }
   ol,
   ul {
@@ -64,7 +64,7 @@ const ResetCSS = createGlobalStyle`
     box-sizing: border-box;
   }
   * {
-    font-family: 'Kanit', sans-serif;
+    font-family: monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
