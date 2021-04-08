@@ -32,8 +32,8 @@ const StyledProgress = styled.div<StyledProgressProps>`
   overflow: hidden;
 
   ${Bar} {
-    border-top-left-radius: ${({ variant }) => (variant === variants.FLAT ? "0" : "32px")};
-    border-bottom-left-radius: ${({ variant }) => (variant === variants.FLAT ? "0" : "32px")};
+    border-top-left-radius: ${({ variant }) => (variant === variants.FLAT ? "0" : "0")};
+    border-bottom-left-radius: ${({ variant }) => (variant === variants.FLAT ? "0" : "0")};
   }
 
   ${StyledSystemVariant({
