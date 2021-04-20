@@ -126,6 +126,11 @@ export const socials = [
     // ],
   },
   {
+    label: "Telegram",
+    icon: "TelegramIcon",
+    href: "https://t.me/sishi_finance",
+  },
+  {
     label: "Twitter",
     icon: "TwitterIcon",
     href: "https://twitter.com/0xsishi",

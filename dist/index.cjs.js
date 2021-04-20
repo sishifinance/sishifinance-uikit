@@ -2184,6 +2184,11 @@ var socials = [
         href: "https://discord.com/invite/aGQsMxmZbK",
     },
     {
+        label: "Telegram",
+        icon: "TelegramIcon",
+        href: "https://t.me/sishi_finance",
+    },
+    {
         label: "Twitter",
         icon: "TwitterIcon",
         href: "https://twitter.com/0xsishi",
