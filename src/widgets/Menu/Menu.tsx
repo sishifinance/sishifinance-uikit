@@ -124,14 +124,14 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex>
-          <Button variant="text" onClick={() => toggleTheme(!isDark)}>
+          <Button variant="text" onClick={() => toggleTheme(!isDark)} style={{height:"24px", padding:"0 15px"}}>
             {/* alignItems center is a Safari fix */}
             <Flex alignItems="center">
-              <SunIcon color={isDark ? "textDisabled" : "text"} width="24px" />
+              <SunIcon color={isDark ? "textDisabled" : "text"} width="18px" />
               <Text color="textDisabled" mx="4px">
                 /
             </Text>
-              <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
+              <MoonIcon color={isDark ? "text" : "textDisabled"} width="18px" />
             </Flex>
           </Button>
           <UserBlock account={account} login={login} logout={logout} />
