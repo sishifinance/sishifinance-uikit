@@ -21,7 +21,8 @@ export const StyledTag = styled.div<ThemedProps>`
   font-weight: 400;
   height: 21px;
   line-height: 1.5;
-  padding: 0 7px;
+  padding: 0px 3px;
+  margin: 0px 2px;
   white-space: nowrap;
 
   svg {
