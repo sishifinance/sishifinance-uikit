@@ -50,8 +50,13 @@ const StyledButton = styled.button<BaseButtonProps>`
   cursor: pointer;
   display: inline-flex;
   font-family: monospace;
-  font-size: 16px;
+  font-size: ${({ size }) => (size === "sm" ? "12px" : "14px")};
   font-weight: 600;
+  /* max-content instead of auto for Safari fix */
+  width: ${({ fullWidth }) => (fullWidth ? "100%" : "max-content")};
+  height: ${({ size }) => (size === "sm" ? "24px" : "48px")};
+  line-height: 1;
+  letter-spacing: 0.03em;
   justify-content: center;
   letter-spacing: 0.03em;
   line-height: 1;

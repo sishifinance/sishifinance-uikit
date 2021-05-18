@@ -22,6 +22,7 @@ export type Variant = typeof variants[keyof typeof variants];
 export interface TagProps extends SpaceProps {
   variant?: Variant;
   scale?: Scale;
+  color?: string,
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   outline?: boolean;

@@ -114,72 +114,30 @@ export const links = [
 ];
 
 export const socials = [
-  {
-    label: "Telegram",
-    icon: "TelegramIcon",
-    items: [
-      {
-        label: "English",
-        href: "https://t.me/sishi_finance",
-      },
-      // {
-      //   label: "Bahasa Indonesia",
-      //   href: "https://t.me/PancakeSwapIndonesia",
-      // },
-      // {
-      //   label: "中文",
-      //   href: "https://t.me/goosefinancechinese",
-      // },
-      // // {
-      // //   label: "Tiếng Việt",
-      // //   href: "https://t.me/PancakeSwapVN",
-      // // },
-      // // {
-      // //   label: "Italiano",
-      // //   href: "https://t.me/pancakeswap_ita",
-      // // },
-      // {
-      //   label: "русский",
-      //   href: "https://t.me/goosefinancerussian",
-      // },
-      // {
-      //   label: "Türkiye",
-      //   href: "https://t.me/GooseFinanceTurkey",
-      // },
-      // // {
-      // //   label: "Português",
-      // //   href: "https://t.me/PancakeSwapPortuguese",
-      // // },
-      // {
-      //   label: "Español",
-      //   href: "https://t.me/goosefinancespanish",
-      // },
-      // {
-      //   label: "日本語",
-      //   href: "https://t.me/goosefinancejapanese",
-      // },
-      // // {
-      // //   label: "Français",
-      // //   href: "https://t.me/pancakeswapfr",
-      // // },
-      // {
-      //   label: "Announcements",
-      //   href: "https://t.me/goosefinanceann",
-      // },
-      // {
-      //   label: "Price Bot",
-      //   href: "https://t.me/BinanceRocketEGG",
-      // },
-    ],
-  },
-  {
-    label: "Twitter",
-    icon: "TwitterIcon",
-    href: "https://twitter.com/0xsishi",
-  },
+  // {
+  //   label: "Discord",
+  //   icon: "DiscordIcon",
+  //   href: "https://discord.com/invite/aGQsMxmZbK",
+  //   // items: [
+  //   //   {
+  //   //     label: "English",
+  //   //     href: "https://t.me/sishi_finance",
+  //   //   },
+  //   // ],
+  // },
+  // {
+  //   label: "Telegram",
+  //   icon: "TelegramIcon",
+  //   href: "https://t.me/sishi_finance",
+  // },
+  // {
+  //   label: "Twitter",
+  //   icon: "TwitterIcon",
+  //   href: "https://twitter.com/0xsishi",
+  // },
 ];
 
 export const MENU_HEIGHT = 64;
-export const MENU_ENTRY_HEIGHT = 48;
-export const SIDEBAR_WIDTH_FULL = 240;
+export const MENU_ENTRY_HEIGHT = 40;
+export const SIDEBAR_WIDTH_FULL = 200;
 export const SIDEBAR_WIDTH_REDUCED = 56;

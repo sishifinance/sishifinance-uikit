@@ -8,8 +8,10 @@ import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import UserBlock from "./components/UserBlock";
 import { NavProps } from "./types";
-import Avatar from "./components/Avatar";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import { Button } from "../../components/Button";
+import { MoonIcon, SunIcon } from "./icons";
+import { Text } from "../../components/Text";
 
 const Wrapper = styled.div`
   position: relative;
@@ -78,44 +80,44 @@ const Menu: React.FC<NavProps> = ({
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
   const [isPushed, setIsPushed] = useState(!isMobile);
-  const [showMenu, setShowMenu] = useState(true);
+  // const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentOffset = window.pageYOffset;
-      const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
-      const isTopOfPage = currentOffset === 0;
-      // Always show the menu when user reach the top
-      if (isTopOfPage) {
-        setShowMenu(true);
-      }
-      // Avoid triggering anything at the bottom because of layout shift
-      else if (!isBottomOfPage) {
-        if (currentOffset < refPrevOffset.current) {
-          // Has scroll up
-          setShowMenu(true);
-        } else {
-          // Has scroll down
-          setShowMenu(false);
-        }
-      }
-      refPrevOffset.current = currentOffset;
-    };
-    const throttledHandleScroll = throttle(handleScroll, 200);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentOffset = window.pageYOffset;
+  //     const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
+  //     const isTopOfPage = currentOffset === 0;
+  //     // Always show the menu when user reach the top
+  //     if (isTopOfPage) {
+  //       setShowMenu(true);
+  //     }
+  //     // Avoid triggering anything at the bottom because of layout shift
+  //     else if (!isBottomOfPage) {
+  //       if (currentOffset < refPrevOffset.current) {
+  //         // Has scroll up
+  //         setShowMenu(true);
+  //       } else {
+  //         // Has scroll down
+  //         setShowMenu(false);
+  //       }
+  //     }
+  //     refPrevOffset.current = currentOffset;
+  //   };
+  //   const throttledHandleScroll = throttle(handleScroll, 200);
 
-    window.addEventListener("scroll", throttledHandleScroll);
-    return () => {
-      window.removeEventListener("scroll", throttledHandleScroll);
-    };
-  }, []);
+  //   window.addEventListener("scroll", throttledHandleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", throttledHandleScroll);
+  //   };
+  // }, []);
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
 
   return (
     <Wrapper>
-      <StyledNav showMenu={showMenu}>
+      <StyledNav showMenu={true}>
         <Logo
           isPushed={isPushed}
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
@@ -123,15 +125,25 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex>
+          <Button variant="text" onClick={() => toggleTheme(!isDark)} style={{height:"24px", padding:"0 5px", marginRight:"10px"}}>
+            {/* alignItems center is a Safari fix */}
+            <Flex alignItems="center">
+              <SunIcon color={isDark ? "textDisabled" : "text"} width="18px" />
+              <Text color="textDisabled" mx="4px">
+                /
+            </Text>
+              <MoonIcon color={isDark ? "text" : "textDisabled"} width="18px" />
+            </Flex>
+          </Button>
           <UserBlock account={account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
+          {/* {profile && <Avatar profile={profile} />} */}
         </Flex>
       </StyledNav>
       <BodyWrapper>
         <Panel
           isPushed={isPushed}
           isMobile={isMobile}
-          showMenu={showMenu}
+          showMenu={true}
           isDark={isDark}
           toggleTheme={toggleTheme}
           langs={langs}
@@ -141,7 +153,7 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
         />
-        <Inner isPushed={isPushed} showMenu={showMenu}>
+        <Inner isPushed={isPushed} showMenu={true}>
           {children}
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
