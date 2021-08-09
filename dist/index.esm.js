@@ -3757,25 +3757,25 @@ var links = [
     },
 ];
 var socials = [
-    {
-        label: "Telegram",
-        icon: "TelegramIcon",
-        items: [
-            {
-                label: "TG Channel",
-                href: "https://t.me/mbtc_finance",
-            },
-            {
-                label: "TG Group",
-                href: "https://t.me/micro_btc",
-            },
-        ],
-    },
-    {
-        label: "Twitter",
-        icon: "TwitterIcon",
-        href: "https://twitter.com/mbitcoin_mbtc",
-    },
+// {
+//   label: "Telegram",
+//   icon: "TelegramIcon",
+//   items: [
+//     {
+//       label: "TG Channel",
+//       href: "https://t.me/mbtc_finance",
+//     },
+//     {
+//       label: "TG Group",
+//       href: "https://t.me/micro_btc",
+//     },
+//   ],
+// },
+// {
+//   label: "Twitter",
+//   icon: "TwitterIcon",
+//   href: "https://twitter.com/mbitcoin_mbtc",
+// },
 ];
 var MENU_HEIGHT = 64;
 var MENU_ENTRY_HEIGHT = 48;
